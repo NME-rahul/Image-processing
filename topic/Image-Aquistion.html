@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <title>NME-rahul: Image-Aquistion</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <div class = "Image-Aquistion">
-    <div class="heading"><h1>Image Aquistion</h1></div><div class="cat-bottom"></div>
-	<div class="text">
-    <p>Every image from physical world is captured in analog signals and we just store it in digital format.
-       This process of storing analog signal image in digital format is called Digitization. This Process invloves two main steps.<br>
-       1. Sampling <br>
-       2. Qunatization <br>
-	   <br>
-	   If we plot a analog signal of image(before digitizing) on x and y axis then it denotes the time and it's amplitude respectively. After digitization x and y axis values are represented as no of pixels(spatial feature) and no of levels(qunatization). An image function f(x,y) used to locate particular pixels value, this are also called spatial co-ordinates.
-    </p>
-	<img src="https://miro.medium.com/v2/resize:fit:1074/format:webp/0*HUorIR2W5qyJ-k09.jpg" class="ImageAquistion">
-	
-	<h3>Sampling<h3>
+	<head>
+	  <title>NME-rahul: Image-Aquistion</title>
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="css/style.css">
+  	</head>
+  	<body>
+	  <div class = "Image-Aquistion">
+	    <div class="heading"><h1>Image Aquistion</h1></div><div class="cat-bottom"></div>
+		<div class="text">
+	    <p>Every image from physical world is captured in analog signals and we just store it in digital format.
+	       This process of storing analog signal image in digital format is called Digitization. This Process invloves two main steps.<br>
+	       1. Sampling <br>
+	       2. Qunatization <br>
+		   <br>
+		   If we plot a analog signal of image(before digitizing) on x and y axis then it denotes the time and it's amplitude respectively. After digitization x and y axis values are represented as no of pixels(spatial feature) and no of levels(qunatization). An image function f(x,y) used to locate particular pixels value, this are also called spatial co-ordinates.
+	    </p>
+		<img src="https://miro.medium.com/v2/resize:fit:1074/format:webp/0*HUorIR2W5qyJ-k09.jpg" class="ImageAquistion">
+
+		<h3>Sampling<h3>
+			<p>
+				Sampling is a process of discretization of time series data of analog image. Digitizing is always done on independent variable. Sampling has relationship with image pixels the more you sample more you wll get the pixels in digital image. pixels = total no of rows * total no of columns. For example, a 64x64 image have 64 rows and 64 columns. The number of samples is directly equal to the number sensors on CCD(charged couple device) array.
+
+			 <br><br>
+			 no of pixes = no of sensors in CCD array.<br>
+			 32 megapixels(mp) camera have 32x10^6 sensors in it's 2d array.
+			 <br><br>
+			 let a analog signal(image) have continious values ranging from 0 to 512. then we can discritize this value based on
+			</p>
+		<img src="https://www.tutorialspoint.com/digital_communication/images/continuous_time_and_sampled_signal.jpg" class="sampling">
+
+		<h3>Qunatization</h3>
 		<p>
-			Sampling is a process of discretization of time series data of analog image. Digitizing is always done on independent variable. Sampling has relationship with image pixels the more you sample more you wll get the pixels in digital image. pixels = total no of rows * total no of columns. For example, a 64x64 image have 64 rows and 64 columns. The number of samples is directly equal to the number sensors on CCD(charged couple device) array.
-		 
-		 <br><br>
-		 no of pixes = no of sensors in CCD array.<br>
-		 32 megapixels(mp) camera have 32x10^6 sensors in it's 2d array.
-		 <br><br>
-		 let a analog signal(image) have continious values ranging from 0 to 512. then we can discritize this value based on
+			Quantization is done on the y-axis while sampling is done on the x-axis. In the process of Quantization you arre digitizing the amplitude value of analog image. apmlitude value is divide into the some discrete and this discrete value repersents the no of levels in image. For example if we quantize the image in 7 levels(or seven discrete values) then we have the 7 differents shades of a color. Qunatization improves the quality of image the more you quantize the value more you will get different shades of a color.
+			<br><br>
+			If we increase the quantization level to 256 it means we have grayscle image containing 256 different color values for gray and if qunatize the image in 2 levels then we have on two colors black(0) and white(1) it is called a binary image.
 		</p>
-	<img src="https://www.tutorialspoint.com/digital_communication/images/continuous_time_and_sampled_signal.jpg" class="sampling">
-	
-	<h3>Qunatization</h3>
-	<p>
-		Quantization is done on the y-axis while sampling is done on the x-axis. In the process of Quantization you arre digitizing the amplitude value of analog image. apmlitude value is divide into the some discrete and this discrete value repersents the no of levels in image. For example if we quantize the image in 7 levels(or seven discrete values) then we have the 7 differents shades of a color. Qunatization improves the quality of image the more you quantize the value more you will get different shades of a color.
-		<br><br>
-		If we increase the quantization level to 256 it means we have grayscle image containing 256 different color values for gray and if qunatize the image in 2 levels then we have on two colors black(0) and white(1) it is called a binary image.
-	</p>
-	<img src="images/gray-binary.jpg" width="800" height="400">
-	<p>
-	   Don't confuse between the values present in image matrix if talking about x levels qunatizaed means matrix will containg value only in range 0-x the size of matrix can be anything.
-	   For example the above image gray scale image of 600x400 grayscale image means it have matrix dimesion of 600x400 and values in this matrix lies between 0-256. Number of quantization will always be in 2 to the power.   
-   </p>
-   <img src="https://miro.medium.com/v2/resize:fit:1152/1*b2UpQ2955QWVX6h6K32TAA.gif" style="margin-left:30%">
-   <p>Quantization is decreasing from left image to right image.</p>
-  </div>
-  </div>
+		<img src="images/gray-binary.jpg" width="800" height="400">
+		<p>
+		   Don't confuse between the values present in image matrix if talking about x levels qunatizaed means matrix will containg value only in range 0-x the size of matrix can be anything.
+		   For example the above image gray scale image of 600x400 grayscale image means it have matrix dimesion of 600x400 and values in this matrix lies between 0-256. Number of quantization will always be in 2 to the power.   
+	   </p>
+	   <img src="https://miro.medium.com/v2/resize:fit:1152/1*b2UpQ2955QWVX6h6K32TAA.gif" style="margin-left:30%">
+	   <p>Quantization is decreasing from left image to right image.</p>
+	  </div>
+	  </div>
+  </body>
   
   <!--footer-->
   <div class="custom">
