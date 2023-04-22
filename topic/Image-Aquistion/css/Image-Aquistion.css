@@ -34,9 +34,7 @@ h3{
 	font-size: 30px;
 }
 p{
-	
 	margin-left: 10px;
-	margin-right: 10px;
 	font-size: 20px;
 }
 .text{
@@ -45,7 +43,8 @@ p{
 
 /*images only*/
 img{
-	margin-left: 23%;
+	margin: auto;
+	display: block;
 	position: relative;
 }
 
@@ -57,7 +56,6 @@ img{
 }
 .shuttle{
 	opacity: 1;
-	
 }
 
 
