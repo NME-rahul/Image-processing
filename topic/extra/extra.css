@@ -1,6 +1,27 @@
 body{
 	font-family: Andika;
 }
+.head{
+	height: 50px;
+	width: 100%;
+	float: left;
+}
+.topics{
+	color: white;
+	margin-top: 5px; 
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #3c73ff;
+	background-color: #3c73ff;
+	border-radius: 20px;
+	color: #fff;
+	transition: .3s;
+}
+.topics:hover{
+	box-shadow: 8px 8px #99bdff;
+	transition: .3s;
+}
 
 /*footer only*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
