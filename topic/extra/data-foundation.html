@@ -18,6 +18,7 @@
       <a href="#EDA" class="topics">#Exploratory Data Analysis</a>
       <a href="#DataPrivacy" class="topics">#Data Privacy</a>
 	  <a href="#DataMiningAndWarehouse" class="topics">#Data Mining and Warehouse</a>
+	  <a href="SQLdataExtraction" class="topics"># SQL Data Extraction</a>
     </div>
 	  <h2 id="DataQuality"># Data Quality</h2>
 	  <p>Data quality refers to the state of qualitative or quantitative pieces of information. There are many definitions of data quality, but data is generally considered high quality if it is "fit for [its] intended uses in operations, decision making and planning".
@@ -144,6 +145,32 @@
 		</tr>
 	  </table>
 	  <br><br>
+	  <h2 id="SQLdataExtraction"># SQL Data Extraction</h2>
+	  <p>
+	  	SQL is the language use to interact with SQL database. There are different statments/query available to extract data from database it's depended on the analysts.
+		<br>1. SQL data extraction from single table<br>
+		For example, to select the PID, firstname, and lastname from the Patients table, you can write:
+		SELECT pid, firstname, lastname FROM Patients<br>
+		SELECT * FROM Patients.<br>
+		SELECT * FROM Patients WHERE height > 1.5
+		<br><br>
+		2. Extraction from multiple tables<br>
+		In most database applications, you need to pull out data from more than one table. This is particularly true when you are working with a fully normalized database.<br>
+		A join allows you to select all the data in one table based on a matching condition from another table.
+		There are various types of joins:<br>
+		-Inner join<br>
+		-Left outer join<br>
+		-Right outer join<br>
+		-Full outer join<br>
+		For example: SELECT p.aid, p.firstname, p.lastname, r.testdescription, r.date, FROM patient p INNER JOIN result r ON p.pid = r.pid WHERE p.pid = "003080567";
+		<br><br>
+		3. Combined Extraction - <br>
+		Another option is to extract data from multipe tables using union operator.<br>
+		The UNION operator combines table from various SELECT commands.<br>
+		
+		For example: SELECT pid, firstname, lastname, testdate, testdescription FROM labtest UNION SELECT pid, firstname, lastname, date, description FROM radtest;
+		<br><br><br>
+	  </p>
   </body>
   
   <!--footer-->
