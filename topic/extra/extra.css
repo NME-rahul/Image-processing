@@ -4,13 +4,14 @@ body{
 .head{
 	height: 100px;
 	width: 100%;
+	padding: 5px;
 	float: left;
+	position: relative;
 }
 .topics{
 	color: white;
-	margin: 6px;
-	margin-top: 10px;
-	padding: 10px 20px;
+	margin: 3px;
+	padding: 10px;
 	text-align: center;
 	text-decoration: none;
 	border: 2px solid #3c73ff;
@@ -22,6 +23,9 @@ body{
 .topics:hover{
 	box-shadow: 8px 8px #99bdff;
 	transition: .3s;
+}
+table, th, td{
+	border: solid;
 }
 
 /*footer only*/
