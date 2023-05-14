@@ -2,13 +2,14 @@ body{
 	font-family: Andika;
 }
 .head{
-	height: 50px;
+	height: 250px;
 	width: 100%;
 	float: left;
 }
 .topics{
 	color: white;
-	margin: 6px; 
+	margin: 6px;
+	margin-top: 5px;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
