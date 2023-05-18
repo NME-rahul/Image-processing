@@ -20,11 +20,11 @@
 	
 	<h3>Sampling</h3>
 		<p>
-			Sampling is a process of discretization of time series data of analog image. Digitizing is always done on independent variable. Sampling has relationship with image pixels the more you sample more you wll get the pixels in digital image. pixels = total no of rows * total no of columns. For example, a 64x64 image have 64 rows and 64 columns. The number of samples is directly equal to the number sensors on CCD(charged couple device) array.
+			Sampling is a process of discretization of time series data of analog image. Digitizing is always done on independent variable. Sampling has relationship with image pixels the more you sample more you wll get the pixels in digital image. pixels = total no of rows * total no of columns. For example, a 64x64 image have 64 rows and 64 columns. The number of samples is directly equal to the number sensors on CCD(charged couple device) array in today's digital cameras.
 		 
 		 <br><br>
 		 no of pixes = no of sensors in CCD array.<br>
-		 32 megapixels(mp) camera have 32x10^6 sensors in it's 2d array.
+		 For example, A 32 megapixels(mp) camera have 32x10^6 sensors in it's 2d array.
 		 <br><br>
 		 let a analog signal(image) have continious values ranging from 0 to 512. then we can discritize this value based on
 		</p>
@@ -32,14 +32,14 @@
 	
 	<h3>Qunatization</h3>
 	<p>
-		Quantization is done on the y-axis while sampling is done on the x-axis. In the process of Quantization you arre digitizing the amplitude value of analog image. apmlitude value is divide into the some discrete and this discrete value repersents the no of levels in image. For example if we quantize the image in 7 levels(or seven discrete values) then we have the 7 differents shades of a color. Qunatization improves the quality of image the more you quantize the value more you will get different shades of a color.
+		Quantization is done on the y-axis while sampling is done on the x-axis. In the process of Quantization you arre digitizing the amplitude value of analog image. amplitude value is divide into the some discrete values and these discrete value repersents the no of levels in image. For example if we quantize the image in 7 levels(or seven discrete values) then we have the 7 differents shades of a color. Qunatization improves the quality of image the more you quantize the value more you will get different shades of a color.
 		<br><br>
 		If we increase the quantization level to 256 it means we have grayscle image containing 256 different color values for gray and if qunatize the image in 2 levels then we have on two colors black(0) and white(1) it is called a binary image.
 	</p>
-	<img src="images/gray-binary.jpg" width="60%" height="20%">
+	<img src="/Users/rahulverma/downloads/gray-binary.jpg" width="80%" height="40%">
 	<p>
-	   Don't confuse between the values present in image matrix if talking about x levels qunatizaed means matrix will containg value only in range 0-x the size of matrix can be anything.
-	   For example the above image gray scale image of 600x400 grayscale image means it have matrix dimesion of 600x400 and values in this matrix lies between 0-256. Number of quantization will always be in 2 to the power.   
+	   Don't confuse between the values present in image matrix and range. If we are talking about X levels qunatizaed means matrix contains value only range 0 - X the size of matrix can be anything.
+	   For example, the above image is a gray scale image of 600x400 meaning it is denoting dimensions having 600x400(240000) pixels and values in this matrix lies between the range 0-256. Number of quantization will always be in 2 to the power.   
    </p>
    <img src="https://miro.medium.com/v2/resize:fit:1152/1*b2UpQ2955QWVX6h6K32TAA.gif">
    <p>Quantization is decreasing from left image to right image.</p>
